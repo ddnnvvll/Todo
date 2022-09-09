@@ -1,0 +1,139 @@
+*{
+  margin: 0;
+  padding: 0;
+
+  color: rgb(235, 235, 235);
+}
+
+body{
+  background: rgb(248,183,255);
+  background: linear-gradient( 170deg,
+    rgba(248,183,255,1) 0%,
+    rgba(255,160,254,1) 25%, 
+    rgba(224,198,255,1) 75%, 
+    rgba(197,255,251,1) 100%);
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: column;
+
+  padding: 0 10px;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+h1, h2, span, p{
+  text-shadow: -0.5px 0.5px 3px black;
+  font-family: 'Montserrat', sans-serif;
+}
+
+small{
+  color: rgb(194, 194, 194);
+}
+
+textarea{
+  resize: none;
+}
+
+.header, .taskList, .newTask{
+  margin: 20px 0;
+}
+
+/* Список задач */
+
+.taskList{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.checkedTaskList{
+  display: none;
+}
+
+.listSlide{
+  display: flex;
+  justify-content: space-around;
+}
+
+#listSlide_task, #listSlide_trash{
+  cursor: pointer;
+}
+
+/* Задача */
+
+.task{
+  background-color: rgba(255, 255, 255, 0.3);
+
+  border-radius: 20px;
+  padding: 10px;
+  margin: 5px 0;
+
+
+  display: flex;
+  text-align: start;
+  justify-content: space-between;
+}
+
+.checkboxTask{
+  display: none;
+}
+
+.task_button{
+  display: flex;
+}
+
+.checkboxTask:checked+label{
+  border: red 4px solid;
+}
+
+/* Окно ввода */
+
+.newTask{
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  flex-direction: column;
+
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+
+  /* color: black; */
+}
+
+#userTaskHeader{
+  background: none; 
+  /* border-radius: 20px; */
+  border: 0;
+  /* border-bottom: 1px solid white; */
+  padding: 10px;
+  color: black;
+}
+
+#userTaskBody{
+  background: none; 
+  border: 0;
+  padding: 10px;
+  color: black;
+}
+
+/* Кнопка */
+
+.AddTask{
+  padding: 3px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.AddTask > p {
+  font-size: large;
+}
+
+.AddTask:hover{
+  color: rgb(0 0 0);
+}
